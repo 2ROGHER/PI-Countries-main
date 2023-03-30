@@ -1,0 +1,54 @@
+@import url("../Nav/Nav.module.css");
+.cardContainer {
+    border: 0.2rem solid gray;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 36rem;
+    border-radius: 1rem;
+    background-color: rgb(203, 202, 202);
+}
+.heart{
+    width: 2.3rem;
+    border: none;
+}
+.Buttons button{
+    border: none;
+    background-color: transparent;
+}
+img.flags {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   border: 15px solid var(--base-color);
+}
+div.Buttons{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+.Buttons button:hover{
+    background-color: rgb(242, 203, 203);
+    border-radius: 1rem;
+}
+.cardContainer h1{
+    font-family: var(--font-family-one);
+}
+div button.viewDetails{
+    height: 3rem;
+    width: 10rem;
+    border-radius: 1rem;
+    border: 0rem solid green;
+    font-family: var(--font-family-base);
+    font-weight: bolder;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+div.info {
+    border: 1px solid green;
+    margin: 1rem;
+    border: 15px solid rgb(133, 132, 132);
+    border-radius: 1rem;
+    background-color: rgb(222, 219, 219);
+}

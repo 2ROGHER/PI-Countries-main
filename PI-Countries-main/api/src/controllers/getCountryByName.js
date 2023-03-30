@@ -1,4 +1,4 @@
-const { Country } = require('../db/db.js');
+const { Country } = require('../database/db.js');
 const { Op } = require('sequelize');
 const getCountryByName =  async (name) =>{
     return await Country.findAll({

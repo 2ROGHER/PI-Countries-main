@@ -1,0 +1,67 @@
+:root {
+  --font-family-alternative: "Menlo", "Monaco", "Consolas", "Courier New",
+    monospace;
+  --font-family-base: cera-round-pro, "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  --base-color: rgb(218, 217, 217);
+}
+* {
+  font-family: var(--font-family-base);
+  color: #343a40;
+}
+nav {
+  border-bottom: 0.1rem solid gray;
+  background-color: var(--base-color);
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  /* border: 1px solid red; */
+  font-size: 1.2rem;
+}
+ul li :hover {
+  color: rgb(163, 15, 15);
+}
+h1 {
+  font-weight: lighter;
+}
+h1:hover {
+  color: rgb(163, 15, 15);
+}
+a {
+  text-decoration: none;
+}
+/*---------- STYLES TO SEARCH BAR --------------*/
+.searchBar {
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  width: 26rem;
+  height: 2.5rem;
+  border-radius: 20px;
+  border: 2px solid rgb(69, 68, 68);
+  background-color: white;
+}
+.searchBar button {
+  width: 4rem;
+}
+
+.searchBar input {
+  width: 20rem;
+  height: 2rem;
+  border-radius: 20px;
+  border:none;
+}
+.searchBar input:focus{
+  border: none;
+}
+.searchBar div button{
+  height: 2rem;
+  border: none;
+  background-color: transparent;
+}

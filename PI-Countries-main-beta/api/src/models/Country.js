@@ -15,13 +15,10 @@ module.exports = (database)=>{
             type:DataTypes.INTEGER,
             autoIncrement: true,
             allowNull: false,
-            require: true,
-            unique: true
         },
         name:{
             type:DataTypes.TEXT,
             allowNull:false,
-            unique:true,
             require: true,
         },
         flag:{
@@ -31,29 +28,22 @@ module.exports = (database)=>{
         continent: {
             type: DataTypes.ARRAY(DataTypes.STRING),
             allowNull: false,
-            unique: true,
-            require: true,
         },
         capital:{
             type: DataTypes.ARRAY(DataTypes.STRING),
             allowNull: false,
-            unique: true,
-            require: true,
         },
         subregion: {
             type: DataTypes.STRING(255),
             allowNull: false,
-            require: true,
         },
         area: {
             type: DataTypes.INTEGER, 
             allowNull: false,
-            require: true,
         },
         poblation:{
             type:DataTypes.INTEGER,
             allowNull: false, 
-            require: true,
         }
     },{ timestamps: false })
 }

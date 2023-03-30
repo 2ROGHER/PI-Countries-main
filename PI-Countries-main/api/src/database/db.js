@@ -21,7 +21,6 @@ fs.readdirSync(path.join(__dirname, '../models'))
   .forEach((file) => {
     modelDefiners.push(require(path.join(__dirname, '../models', file)));
   });
-console.log('holi');
 // Injectamos la conexion (sequelize) a todos los modelos
 modelDefiners.forEach(model => model(sequelize));
 // Capitalizamos los nombres de los modelos ie: product => Product
@@ -34,8 +33,8 @@ const { Pokemon } = sequelize.models;
 const { Activity, Country, CountryActivity } = sequelize.models;
 // Aca vendrian las relaciones i.e:
 // Product.hasMany(Reviews);
-Country.belongsToMany(Activity, { through: CountryActivity});
-Activity.belongsToMany(Country, { through: CountryActivity});
+Country.belongsToMany(Activity, { through: CountryActivity}, { foreignKey: 'country_id'});//personalized name to foreignkey
+Activity.belongsToMany(Country, { through: CountryActivity}, { as: "country"});// alias to foreignKey
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');

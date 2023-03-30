@@ -1,0 +1,47 @@
+[
+  {
+    "name": "",
+    "dificulty": 3,
+    "duration": "8640 horas",
+    "season": ["verano", "primavera"]
+  },
+  {
+    "name": "Comercio",
+    "dificulty": 4,
+    "duration": "8640 horas",
+    "season": ["verano", "invierno", "primavera", "otoño"]
+  },
+  {
+    "name": "Agricultura",
+    "dificulty": 4,
+    "duration": "8640 horas",
+    "season": ["verano", "invierno", "otoño", "primavera"]
+  },
+  {
+    "name": "Industria",
+    "dificulty": "5",
+    "duration": "24:00",
+    "season": "All time"
+  },
+  {
+    "name": "Educación",
+    "dificulty": 4,
+    "duration": "24:00",
+    "season": "All time"
+  },
+  {
+    "name": "Salud",
+    "dificulty": 5,
+    "duration": "24:00",
+    "season": "All time"
+  },
+  {
+    "name": "Deporte",
+    "dificulty": 3,
+    "duration": "1:90"
+  },
+  {
+    "name": "Arte y Cultura",
+    "dificulty": 5
+  }
+]

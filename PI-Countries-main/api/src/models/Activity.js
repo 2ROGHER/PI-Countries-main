@@ -1,41 +1,43 @@
-const { DataTypes, Op, UUIDV4 } = require('sequelize');
+const { DataTypes } = require('sequelize');
 
-const activityModel = (sequelize) =>{
-    sequelize.define("activity",{
+const activityModel = (sequelize) => {
+    sequelize.define("activity", {
         id: {
             type: DataTypes.UUID,
-            defaultValue: UUIDV4,
+            defaultValue: DataTypes.UUIDV4,
             primaryKey: true,
         },
-        key:{
+        key: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
-            unique: true,
-            allowNull:false,
-        },
-        name:{
-            type:DataTypes.STRING,
             allowNull: false,
-            unique: true
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+            get() {
+                const value = this.getDataValue('name');
+                value ? value.toUpperCase() : null;
+            }
         },
         hard: {
             type: DataTypes.INTEGER,
-            validate:{
+            validate: {
                 max: 5,
                 min: 1
             },
             allowNull: false,
         },
         duration: {
-            type: DataTypes.TIME,
+            type: DataTypes.STRING,
             allowNull: true,
         },
         season: {
             type: DataTypes.ENUM,
-            values: ['verano','invierno','otoño','primavera'],
+            values: ['verano', 'invierno', 'otoño', 'primavera'],
             allowNull: false,
         }
-
-    })
+    });
 };
 module.exports = activityModel;

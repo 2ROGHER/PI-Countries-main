@@ -1,11 +1,11 @@
 const express = require('express');
-const cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser');//suport for cookies
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const routes = require('./routes/index.js');
+const routes = require('../routes/index.js');
 
-const allCountries = require('./controllers/allCountries.js');
-require('./db/db.js');
+const allCountries = require('../controllers/allCountries.js');
+require('../database/db.js');
 
 const server = express();
 
@@ -33,11 +33,11 @@ server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   res.status(status).send(message);
 });
 // Route for get all countries
-server.get('/',async (req, res)=>{
+server.get('/', async (req, res) => {
   try {
-      res.status(200).json(await allCountries());
+    res.status(200).json(await allCountries());
   } catch (error) {
-      res.status(404).json({ error: error.message });
+    res.status(404).json({ error: error.message });
   }
 });
 

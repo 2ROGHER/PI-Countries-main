@@ -1,8 +1,6 @@
 const app = require('./src/server/server.js');
 const chalk = require('chalk');
-const { conn, Country } = require('./src/db/db.js');
-const saveDataInDB = require("./src/scripts/utils/saveDataInDB.js");
-const dataJson = require('./src/scripts/utils/datafinalbeta.json');
+const { conn } = require('./src/db/db.js');
 
 //falta la sicronizacion con sequlize
 conn

@@ -13,7 +13,7 @@ const models = fs.readdirSync('./src/models/');
 models.forEach((item) => {
     var Models = require('../models/' + item)
     Models(database);
-});
+});  
 
 /**------------ REALTIONS HERE ------------------ */
 const { Activity, Country, ActivityCountry } = database.models;

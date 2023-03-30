@@ -1,4 +1,4 @@
-const { Activity } = require('../db/db.js');
+const { Activity } = require('../database/db.js');
 
 const getAllActivities = async () =>{
     return await Activity.findAll();
